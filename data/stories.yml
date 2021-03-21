@@ -1,0 +1,56 @@
+version: "2.0"
+
+stories:
+
+- story: happy path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: user wants another location
+  steps:
+  - action: utter_do_you_want_other_location
+  - intent: affirm
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_reset_all_slots
+  - action: weather_form
+  - active_loop: weather_form
+
+- story: user wants another location 2
+  steps:
+  - action: utter_do_you_want_other_location
+  - intent: inform
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: action_reset_all_slots
+  - action: weather_form
+  - active_loop: weather_form
+
+- story: user does not want another location
+  steps:
+  - action: utter_do_you_want_other_location
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_maybe_nexttime
+
+- story: user asks what bot can do
+  steps:
+  - intent: what_can_you_do
+  - action: utter_what_bot_can_do

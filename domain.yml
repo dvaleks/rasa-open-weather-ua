@@ -1,0 +1,75 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  # ...
+  - weather
+  - inform
+  - what_can_you_do
+
+actions:
+  - action_reset_all_slots
+  - action_lookup_city
+
+responses:
+  utter_greet:
+  - text: "Hi! Ask me about current weather in locations around Ukraine"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_maybe_nexttime:
+  - text: "Well, maybe next time. Ping me with smth like 'weather in (location)'... %)"
+
+  utter_do_you_want_other_location:
+  - text: "Do you want to know about another location?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_what_bot_can_do:
+  - text: "I can tell current weather in cities that I know. I can also tell a joke: What does 0 tell to 8? Nice belt"
+
+  utter_ask_weather_form_location:
+  - text: "What location do you want to know about?"
+
+  utter_weather_form_submitted:
+  - text: "Weather form submitted:\n
+          - location: {location}\n"
+
+entities:
+- location
+
+slots:
+  location:
+    type: text
+    influence_conversation: false
+
+forms:
+  weather_form:
+    location:
+    - entity: location
+      type: from_entity
+    - intent:
+      - inform
+      type: from_text

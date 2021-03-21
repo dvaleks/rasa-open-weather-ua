@@ -1,0 +1,358 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - yep
+    - yeah
+    - sure
+    - i do
+    - affirm
+    - affirmative
+    - positive
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nah
+    - nope
+    - negative
+    - nea
+    - don't
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - I am sad
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: what_can_you_do
+  examples: |
+    - what can u do
+    - what can you do
+    - what else can u do
+    - can u do anything else
+    - can you do something else
+
+- intent: weather
+  examples: |
+    - weather plz
+    - forecast plz
+    - give me weather
+    - give me forecast
+    - what is the weather
+    - tell me forecast
+    - weather forecast
+    - what will the weather be
+    - weather [krop](location)
+    - weather [Staryy Dobrotvir](location)
+    - weather [Odessa](location)
+    - weather [Dnipro](location)
+    - weather for [Zolochiv](location)
+    - weather [Zhuravka](location)
+    - weather in [Zhashkiv](location)
+    - weather [Zbarazh](location)
+    - weather [Zarichne](location)
+    - weather [Zaliznyy Port](location)
+    - weather [Zagnitkiv](location)
+    - weather at [Yermakovo](location)
+    - weather [Yasna Polyana](location)
+    - weather [Yahotyn](location)
+    - weather forecast for [Vyshkovo](location)
+    - weather forecast in [Vuhlyar](location)
+    - weather forecast at [Voronovytsya](location)
+    - weather be in [Volnovakha](location)
+    - weather be at [Vyshnivka](location)
+    - weather be for [Veselynove](location)
+    - weather be [Verkhniy Rohachyk](location)
+    - forecast be [Rozivka](location)
+    - weather [Velykyi Bereznyi](location)
+    - it be like in [Urochishche Vasil’yevka](location)
+    - is it like in [Valky](location)
+    - is it like at [Usatove](location)
+    - it be like for [Ukrayinka](location)
+    - wanna weather [Tysmenychany](location)
+    - gimme weather [Tsybulevka](location)
+    - what weather [Trypillia](location)
+    - what is weather [Tymoshivka](location)
+    - what is weather like [Terenair](location)
+    - assistant weather [Tarashcha](location)
+    - assistent weather [Svitlovods’k](location)
+    - asistant weather [Sukhyy Lyman](location)
+    - asistent weather [Strogonovka](location)
+    - info on weather [Staryy Sambir](location)
+    - info about weather [Starokozache](location)
+    - weather [Serednye Vodyane](location)
+    - weather [Solotvyn](location)
+    - weather [Sokal’](location)
+    - weather [Sloviansk](location)
+    - weather [Skole](location)
+    - weather [Synel’nykove](location)
+    - weather [Shyroke](location)
+    - weather [Sheshory](location)
+    - weather [Sharhorod](location)
+    - weather [Serhiyivka](location)
+    - weather [Semenivka](location)
+    - weather [Savran](location)
+    - weather [Rozvadiv](location)
+    - weather [Rivne](location)
+    - weather [Rohatyn](location)
+    - weather [Rezervne](location)
+    - weather [Rakhiv](location)
+    - weather [Pryluky](location)
+    - weather [Sartana](location)
+    - weather [Pozniaky](location)
+    - weather [Pomoriany](location)
+    - weather [Pohrebyshche](location)
+    - weather [Pidbuzh](location)
+    - weather [Pyriatyn](location)
+    - weather [Petrikov](location)
+    - weather [Pervomays’k](location)
+    - weather [Peremyshlyany](location)
+    - weather [Pasichna](location)
+    - weather [Pantayivka](location)
+    - weather [Ostroh](location)
+    - weather [Ordzhonikidze](location)
+    - weather [Olyshivka](location)
+    - weather [Obroshyne](location)
+    - weather [Novi Troyany](location)
+    - weather [Novoulyanovka](location)
+    - weather [Novo-Nikolayevskiy](location)
+    - weather [Novo-Grigor’yevka](location)
+    - weather [Novhorod-Sivers’kyy](location)
+    - weather [Nova Borova](location)
+    - weather [Nizhniy Chorgun’](location)
+    - weather [Nikolayevka](location)
+    - weather [Nedryhayliv](location)
+    - weather [Mytnytsia](location)
+    - weather [Moshny](location)
+    - weather [Mokroye](location)
+    - weather [Mirny](location)
+    - weather [Mezhvodnoye](location)
+    - weather [Mekenziyevi Hory](location)
+    - weather [Matiasa](location)
+    - weather [Mariupol](location)
+    - weather [Maly Mayak](location)
+    - weather [Makiyivka](location)
+    - weather [Lysa Hora](location)
+    - weather [Luhyny](location)
+    - weather [Lopatyn](location)
+    - weather [Lypova Dolyna](location)
+    - weather [Lenino](location)
+    - weather [Ladyzhyn](location)
+    - weather [Verkhnyaya Kutuzovka](location)
+    - weather [Kulykivka](location)
+    - weather [Krucha](location)
+    - weather [Urochyshche Kripke](location)
+    - weather [Lyman](location)
+    - weather [Krasnosilka](location)
+    - weather [Teple](location)
+    - weather [Kozelets’](location)
+    - weather [Kosmach](location)
+    - weather [Korets](location)
+    - weather [Slobozhans’ke](location)
+    - weather [Kolodenka](location)
+    - weather [Kobelyaky](location)
+    - weather [Urochishche Kislsikoye](location)
+    - weather [Kyrykivka](location)
+    - weather [Khrystynivka](location)
+    - weather [Khmelnytskyi](location)
+    - weather [Kharkiv](location)
+    - weather [Kaydaki](location)
+    - weather [Kaniv](location)
+    - weather [Kamin-Kashyrskyi](location)
+    - weather [Bohdanivka](location)
+    - weather [Izyaslav](location)
+    - weather [Ivan’kov](location)
+    - weather [Imeni Lenina](location)
+    - weather [Horlivka](location)
+    - weather [Guchok](location)
+    - weather [Hostomel](location)
+    - weather [Horodyshche](location)
+    - weather [Goncharova](location)
+    - weather [Hnidyn](location)
+    - weather [Gaspra](location)
+    - weather [Foros](location)
+    - weather [Dzvinogrud](location)
+    - weather [Duliby](location)
+    - weather [Drohobych](location)
+    - weather [Sanatoriy Dolossy](location)
+    - weather [Kamianske](location)
+    - weather [Dykan’ka](location)
+    - weather [Dashiv](location)
+    - weather [Chulakivka](location)
+    - weather [Chynadiyovo](location)
+    - weather [Chervona Sloboda](location)
+    - weather [Chernomorskoye](location)
+    - weather [Chernelytsya](location)
+    - weather [Chahor](location)
+    - weather [Buchach](location)
+    - weather [Brylivka](location)
+    - weather [Borova](location)
+    - weather [Velyka Balka](location)
+    - weather [Bibrka](location)
+    - weather [Biryukove](location)
+    - weather [Beryslav](location)
+    - weather [Berezan’](location)
+    - weather [Bilyayivka](location)
+    - weather [Bilohirsk](location)
+    - weather [Bekhtery](location)
+    - weather [Barmashovo](location)
+    - weather [Bakhmach](location)
+    - weather [Avdiyivka](location)
+    - weather [Artemivs’k](location)
+    - weather [Ananyiv](location)
+    - weather [Aleksandrowka](location)
+    - weather [Dzhardzhava](location)
+    - weather [Oddykhne](location)
+    - weather [Movchany](location)
+    - weather [Tavriys’k](location)
+    - weather [Ivanivka](location)
+    - weather [Slavutych](location)
+    - weather [Timofeyevka](location)
+    - weather [Shchorsivka](location)
+    - weather [Topoli](location)
+    - weather [Rivne](location)
+
+- intent: inform
+  examples: |
+    - in [Kyiv](location)
+    - [Kyiv](location)
+    - [kiev](location)
+    - in [Lviv](location)
+    - at [lviv](location)
+    - in [Chernihiv](location)
+    - [kr](location)
+    - in [krop](location)
+    - [kropyvnytskyi](location)
+    - [Sloviansk](location)
+    - [Skole](location)
+    - [Synel’nykove](location)
+    - [Shyroke](location)
+    - [Sheshory](location)
+    - [Sharhorod](location)
+    - [Serhiyivka](location)
+    - [Semenivka](location)
+    - [Savran](location)
+    - [Rozvadiv](location)
+    - [Rivne](location)
+    - [Rohatyn](location)
+    - [Rezervne](location)
+    - [Rakhiv](location)
+    - [Pryluky](location)
+    - [Sartana](location)
+    - [Pozniaky](location)
+    - [Pomoriany](location)
+    - [Pohrebyshche](location)
+    - [Pidbuzh](location)
+    - [Pyriatyn](location)
+    - [Petrikov](location)
+    - [Pervomays’k](location)
+    - [Peremyshlyany](location)
+    - [Pasichna](location)
+    - [Pantayivka](location)
+    - [Ostroh](location)
+  
+
+- synonym: Kyiv
+  examples: |
+    - kiev
+    - kiiv
+    - kiyv
+
+- synonym: Odessa
+  examples: |
+    - odesa
+    - odesamama
+
+- synonym: Dnipro
+  examples: |
+    - dnipropetrovsk
+    - dnepropetrovsk
+    - dnepr
+    - dnepro
+    - dnepre
+
+- synonym: Kropyvnytskyi
+  examples: |
+    - krop
+    - kropych
+    - kropik
+    - kropyk
+    - kirovograd
+    - kirovohrad
